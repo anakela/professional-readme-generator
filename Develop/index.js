@@ -68,15 +68,19 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
+    fs.writeFile(`${data.name}.json`, JSON.stringify(data, null, 2), err => {
+        
+    })
+};
+
+// TODO: Create a function to initialize app
+function init() {
     inquirer
         .prompt(questions)
         .then(answers => {
             
         });
 };
-
-// TODO: Create a function to initialize app
-function init() {}
 
 // Function call to initialize app
 init();
