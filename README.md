@@ -112,7 +112,7 @@ function renderLicenseBadge(license) {
 }
 ```
 
-Lastly, I enjoyed being able to create README.md elements using `Node.js` and `JavaScript`.
+Thirdly, I enjoyed being able to create README.md elements using `Node.js` and `JavaScript`.
 
 ```JavaScript
 function renderLicenseSection(license) {
@@ -125,6 +125,8 @@ This project is licensed under the ${renderLicenseLink(license)}.`;
   return ``;
 }
 ```
+
+Lastly, I learned that in order to format the generated `README.md` file correctly, I needed to remove any indentation that was automated by my code editor.  This helped create a more professional README.md file!
 
 ### Continued Development
 
