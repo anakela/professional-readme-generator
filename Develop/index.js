@@ -46,11 +46,18 @@ const questions = [
         name: 'licenseList',
         type: 'list',
         choices: [
-            'IBM',
-            'ISC',
             'MIT',
-            'Mozilla'
+            'APACHE 2.0',
+            'GPL 3.0',
+            'BSD 3',
+            'None'
         ]
+    },
+    {
+        message: 'How should users reach you with questions?',
+        name: 'contact',
+        type: 'input',
+        default: 'Got questions?  The best way to contact me is through GitHub and email.'
     },
     {
         message: 'What is your GitHub username?',
@@ -67,12 +74,12 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-    fs.writeFile('README.md', `${data.name}.json`, JSON.stringify(data, null, 2), err => {
+function writeToFile(fileName, markdown) {
+    fs.writeFile(fileName, markdown, err => {
         if (err) {
             console.log(err);
         } else {
-            
+            console.log('Success!');
         }
     });
 };
@@ -82,7 +89,9 @@ function init() {
     inquirer
         .prompt(questions)
         .then(answers => {
-            
+            // console.log(answers);
+          const markdown = generateMarkdown(answers);
+          writeToFile('generated_readmes/README.md', markdown);
         });
 };
 
