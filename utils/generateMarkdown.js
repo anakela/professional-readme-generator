@@ -23,18 +23,6 @@ function renderLicenseLink(license) {
   }
 
   return '';
-  // switch (license) {
-  //   case 'MIT': 
-  //     return `[License: MIT](https://opensource.org/licenses/MIT)`;
-  //   case 'APACHE 2.0':
-  //     return `[License: APACHE 2.0](https://opensource.org/licenses/Apache-2.0)`;
-  //   case 'GPL 3.0':
-  //     return `[License: GPL v3](https://www.gnu.org/licenses/gpl-3.0)`;
-  //   case 'BSD 3':
-  //     return `[License: BSD 3](https://opensource.org/licenses/BSD-3-Clause)`;
-  //   default:
-  //     return '';
-  // }
 }
 
 // TODO: Create a function that returns the license section of README
@@ -85,19 +73,5 @@ GitHub: ${data.gitHub}\n
 Email: ${data.email}
 `;
 }
-
-// const testData = {
-//   projName: 'Project Title',
-//   projDesc: 'Project Description',
-//   projInstall: 'Installation Instructions',
-//   projUse: 'Usage Information',
-//   contGuide: 'Contribution Guidelines',
-//   projTest: 'Testing Instructions',
-//   licenseList: 'Mozilla',
-//   gitHub: 'github@example.com',
-//   email: 'angie@example.com'
-// };
-
-// console.log(generateMarkdown(testData));
 
 module.exports = generateMarkdown;

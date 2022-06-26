@@ -89,7 +89,6 @@ function init() {
     inquirer
         .prompt(questions)
         .then(answers => {
-            // console.log(answers);
           const markdown = generateMarkdown(answers);
           writeToFile('generated_readmes/README.md', markdown);
         });
