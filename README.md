@@ -83,7 +83,48 @@ THEN I am taken to the corresponding section of the README
 
 ### What I Learned
 
-This challenge was difficult for me.  Upon viewing the starter code, I was completely lost.  However, with some guidance, I was able to figure out to navigate this assignment.  
+This challenge was difficult for me.  Upon viewing the starter code, I was completely lost.  However, with some guidance, I was able to figure out how to navigate this assignment.  For instance, after creating my `questions` array, I initially attempted to complete the `writeToFile` function.  Howver, I was advised by one of my TAs to complete this portion last.  That assistance was taken and greatly appreciated!
+
+One of the first things I had the opportunity to experience in this challenge was using `require` to link the `Node.js` functionality for `Inquirer`, `file system`, and this project's `generateMarkdown.js` file.
+
+```JavaScript
+const inquirer = require('Inquirer');
+const fs = require('fs');
+const generateMarkdown = require('./utils/generateMarkdown');
+```
+
+I also liked being able to use `Node.js switch` statements to provide users with choices.
+
+```JavaScript
+function renderLicenseBadge(license) {
+  switch (license) {
+    case 'MIT': 
+      return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
+    case 'APACHE 2.0':
+      return `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`;
+    case 'GPL 3.0':
+      return `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`;
+    case 'BSD 3':
+      return `[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)`;
+    default:
+      return '';
+  }
+}
+```
+
+Lastly, I enjoyed being able to create README.md elements using `Node.js` and `JavaScript`.
+
+```JavaScript
+function renderLicenseSection(license) {
+  if (license !== 'None') {
+    return `## License  
+${renderLicenseBadge(license)}
+
+This project is licensed under the ${renderLicenseLink(license)}.`;
+  }
+  return ``;
+}
+```
 
 ### Continued Development
 
