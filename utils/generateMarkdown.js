@@ -16,24 +16,23 @@ function renderLicenseBadge(license) {
 }
 
 // TODO: Create a function that returns the license link
-// If there is no license, return an empty string
 function renderLicenseLink(license) {
   if (license !== 'None') {
     return `- [License](#license)\n`
   }
-
+  // If there is no license, return an empty string
   return '';
 }
 
 // TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
 function renderLicenseSection(license) {
   if (license !== 'None') {
     return `## License  
 ${renderLicenseBadge(license)}
 
-This project is licensed under the ${renderLicenseLink(license)}.`;
+This project is licensed under the ${license}.`;
   }
+  // If there is no license, return an empty string
   return ``;
 }
 
@@ -42,33 +41,33 @@ function generateMarkdown(data) {
   return `# ${data.projName}
 
 ## Description
-### ${data.projDesc}
+${data.projDesc}
 
 ## Table of Contents
 - [Description](#description)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contribution Guidelines](#contribution-guidelines)
-- [Testing](#testing)
 ${renderLicenseLink(data.licenseList)}
-- [GitHub](#github)
-- [Email](#email)
+- [Contribution Guidelines](#contribution-guidelines)
+- [Tests](#tests)
+- [Questions](#questions)
 
 ## Installation
-### ${data.projInstall}
+${data.projInstall}
 
 ## Usage
-### ${data.projUse}
-
-## Contribution Guidelines
-### ${data.contGuide}
-
-## Testing
-### ${data.projTest}
+${data.projUse}
 
 ${renderLicenseSection(data.licenseList)}
 
+## Contribution Guidelines
+${data.contGuide}
+
+## Tests
+${data.projTest}
+
 ## Questions
+${data.contact}\n
 GitHub: ${data.gitHub}\n
 Email: ${data.email}
 `;

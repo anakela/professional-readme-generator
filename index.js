@@ -90,7 +90,7 @@ function init() {
         .prompt(questions)
         .then(answers => {
           const markdown = generateMarkdown(answers);
-          writeToFile('generated_readme/README.md', markdown);
+          writeToFile(`generated_readme/README.md`, markdown);
         });
 };
 
