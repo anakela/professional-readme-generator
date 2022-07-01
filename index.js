@@ -27,19 +27,19 @@ const questions = [
         message: 'Please provide usage information for your project.',
         name: 'projUse',
         type: 'input',
-        default: 'This is how we do iiiiit.'
+        default: 'This project is used to...'
     },
     {
         message: 'Please provide contributation guidelines.',
         name: 'contGuide',
         type: 'input',
-        default: 'You must be this tall to contribute.'
+        default: 'Contribution guidelines should be formatted as ...'
     },
     {
         message: 'How does one test your project?',
         name: 'projTest',
         type: 'input',
-        default: 'This is the real test.'
+        default: 'This is how I would test the project...'
     },
     {
         message: 'Please select a license for your application.',

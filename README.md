@@ -1,4 +1,4 @@
-# Project Name - change to the name of your project
+# README Generator
 
 ## Table of Contents
 
@@ -67,7 +67,7 @@ THEN I am taken to the corresponding section of the README
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./images/readme-generator-screenshot.png)
 
 
 ### Links
@@ -144,12 +144,24 @@ const questions = [
 ```
 
 ```JavaScript
+function writeToFile(readMeName, markdown) {
+    fs.writeFile(`generated-readme/${readMeName}.md`, markdown, err => {
+        if (err) {
+            console.log(err);
+        } else {
+            console.log('Success!');
+        }
+    });
+};
+```
+
+```JavaScript
 function init() {
     inquirer
         .prompt(questions)
         .then(answers => {
           const markdown = generateMarkdown(answers);
-          writeToFile(`generated_readme/${data.readMeName}.md`, markdown);
+          writeToFile(answers.readMeName, markdown);
         });
 };
 ```
@@ -173,4 +185,5 @@ function init() {
 - Fellow Bootcampers:
     - Nolan Spence
     - Ivy Chang
+    - Andrew White
 - Luigi Campbell (TA)

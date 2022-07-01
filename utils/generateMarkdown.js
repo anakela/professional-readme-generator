@@ -18,7 +18,7 @@ function renderLicenseBadge(license) {
 // TODO: Create a function that returns the license link
 function renderLicenseLink(license) {
   if (license !== 'None') {
-    return `- [License](#license)\n`
+    return `- [License](#license)`
   }
   // If there is no license, return an empty string
   return '';
@@ -27,10 +27,8 @@ function renderLicenseLink(license) {
 // TODO: Create a function that returns the license section of README
 function renderLicenseSection(license) {
   if (license !== 'None') {
-    return `## License  
-${renderLicenseBadge(license)}
-
-This project is licensed under the ${license}.`;
+    return `## License
+This project is licensed under the ${license} license.`;
   }
   // If there is no license, return an empty string
   return ``;
@@ -40,6 +38,8 @@ This project is licensed under the ${license}.`;
 function generateMarkdown(data) {
   return `# ${data.projName}
 
+${renderLicenseBadge(data.licenseList)}
+
 ## Description
 ${data.projDesc}
 
@@ -48,7 +48,7 @@ ${data.projDesc}
 - [Installation](#installation)
 - [Usage](#usage)
 ${renderLicenseLink(data.licenseList)}
-- [Contribution Guidelines](#contribution-guidelines)
+- [Contributing](#contributing)
 - [Tests](#tests)
 - [Questions](#questions)
 
@@ -60,7 +60,7 @@ ${data.projUse}
 
 ${renderLicenseSection(data.licenseList)}
 
-## Contribution Guidelines
+## Contributing
 ${data.contGuide}
 
 ## Tests
@@ -68,8 +68,8 @@ ${data.projTest}
 
 ## Questions
 ${data.contact}\n
-GitHub: ${data.gitHub}\n
-Email: ${data.email}
+**GitHub:** [${data.gitHub}](https://github.com/${data.gitHub})\n
+**Email:** [${data.email}](mailto:${data.email})
 `;
 }
 
