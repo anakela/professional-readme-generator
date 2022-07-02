@@ -6,8 +6,7 @@
   - [The Challenge](#the-challenge)
   - [User Story](#user-story)
   - [Acceptance Criteria](#acceptance-criteria)+
-  - [How This Works Video](#how-this-works-video)
-  - [Screenshot](#screenshot)
+  - [Screenshots](#screenshots)
   - [Links](#links)
 - [My Process](#my-process)
   - [Built With](#built-with)
@@ -66,10 +65,9 @@ WHEN I click on the links in the Table of Contents
 THEN I am taken to the corresponding section of the README
 ```
 
-### [How This Works Video](./videos/soto-challenge9-readme-recording.mp4)
+### Screenshots
 
-### Screenshot
-
+![](./images/soto-challenge9-readme-recording.gif)
 ![](./images/readme-generator-screenshot.png)
 ![](./images/github-link-screenshot.png)
 ![](./images/email-link-screenshot.png)
