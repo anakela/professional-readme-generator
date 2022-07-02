@@ -67,7 +67,7 @@ THEN I am taken to the corresponding section of the README
 
 ### Screenshots
 
-![](./images/soto-challenge9-readme-recording2.gif)
+https://user-images.githubusercontent.com/103882157/177017913-3e96346f-3a1b-4027-90d0-def51028103f.mp4
 
 If desired, you can [download the video of how the README generator works here](./videos/soto-challenge9-readme-recording.mp4).
 
