@@ -67,7 +67,7 @@ THEN I am taken to the corresponding section of the README
 
 ### Screenshots
 
-![](./images/soto-challenge9-readme-recording.gif)
+![](./images/soto-challenge9-readme-recording2.gif)
 
 If desired, you can [download the video of how the README generator works here](./videos/soto-challenge9-readme-recording.mp4).
 
