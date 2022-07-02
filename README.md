@@ -5,7 +5,7 @@
 - [Overview](#overview)
   - [The Challenge](#the-challenge)
   - [User Story](#user-story)
-  - [Acceptance Criteria](#acceptance-criteria)+
+  - [Acceptance Criteria](#acceptance-criteria)
   - [Screenshots](#screenshots)
   - [Links](#links)
 - [My Process](#my-process)
